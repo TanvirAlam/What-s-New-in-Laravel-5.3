@@ -5,4 +5,20 @@
 -Events, listeners, polisy they are out
     - use: php artisan make:event UserBecamePremimum to create
     - php artisan make:listemers
-    
+//-----------------------------
+>>> cache()
+=> Illuminate\Cache\CacheManager {#260}
+>>> cache(['user.1.votes' => [1,2,3]])
+Exception with message 'You must set an expiration time when putting to the cache.'
+>>> cache(['user.1.votes' => [1,2,3]],60)
+=> null
+>>> cache('user.1.votes');
+=> [
+     1,
+     2,
+     3,
+   ]
+>>> cache()->put('foo','bar', 60);
+=> null
+>>> cache('foo');
+=> "bar"
