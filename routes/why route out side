@@ -28,4 +28,7 @@ gulp
 elixra
 //--------------------------------
 useing vue.js using example component
+//-----------------------------------
+pagination in blade
+php artisan vendor:publish
 
