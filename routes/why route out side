@@ -1,0 +1,8 @@
+-Route is outsid eof app
+    -Web.php
+    -Api
+-php artisan route:list
+-Events, listeners, polisy they are out
+    - use: php artisan make:event UserBecamePremimum to create
+    - php artisan make:listemers
+    
