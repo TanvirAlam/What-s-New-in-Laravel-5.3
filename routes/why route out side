@@ -22,3 +22,10 @@ Exception with message 'You must set an expiration time when putting to the cach
 => null
 >>> cache('foo');
 => "bar"
+//---------------------------------------
+resource/asset new js directories
+gulp
+elixra
+//--------------------------------
+useing vue.js using example component
+

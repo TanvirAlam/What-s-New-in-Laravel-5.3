@@ -6,7 +6,7 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        I'm an example component!
+                        {{ message }}
                     </div>
                 </div>
             </div>
@@ -16,7 +16,12 @@
 
 <script>
     export default {
-        mounted() {
+        data() {
+            return {
+                message: 'Whats new in laravel 5.3'
+            };
+        },
+        ready() {
             console.log('Component ready.')
         }
     }
