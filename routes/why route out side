@@ -31,4 +31,7 @@ useing vue.js using example component
 //-----------------------------------
 pagination in blade
 php artisan vendor:publish
+//----------------------------------------------
+php artisan make:mail WelcomeToLaravel53
+
 

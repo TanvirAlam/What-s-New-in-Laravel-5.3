@@ -11,6 +11,13 @@
 |
 */
 
+use App\Mail\WelcomeToLaravel53;
+use App\User;
+
 Route::get('/', function () {
-    return view('users', ['users' => App\User::paginate(4)]);
+    //return view('users', ['users' => App\User::paginate(4)]);
+
+    $email = new WelcomeToLaravel53(new User(['name' => 'jane']));
+    Mail::to('tanvir@tanvir.dk')->send($email);
+
 });
