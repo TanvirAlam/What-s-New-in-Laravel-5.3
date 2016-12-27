@@ -12,12 +12,13 @@
 */
 
 use App\Mail\WelcomeToLaravel53;
+use App\Notifications\LessionPublished;
 use App\User;
 
 Route::get('/', function () {
-    //return view('users', ['users' => App\User::paginate(4)]);
+    $users = App\User::first();
+    $lession = App\Lession::first();
 
-    $email = new WelcomeToLaravel53(new User(['name' => 'jane']));
-    Mail::to('tanvir@tanvir.dk')->send($email);
+    $users->notify(new LessionPublished($lession));
 
 });
