@@ -12,10 +12,12 @@
 
     </head>
     <body>
-        <div class="container">
-            <h1>My project in Laravel 5.3</h1>
-            <example></example>
-            <script src="/js/app.js"></script>
-        </div>
+        @foreach($users as $user)
+            <li class="{{$loop->first ? 'first': ''}}">{{ $user->name }}</li>
+        @endforeach
+
+        @foreach($users as $user)
+            {{ $user->name }}{{$loop->remaining ? ',' : '' }}
+        @endforeach
     </body>
 </html>
